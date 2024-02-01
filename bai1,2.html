@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <script src="./angular.min.js"></script>
+    <script src="./bai1,2.js"></script>
+  <link rel="stylesheet" href="./bootstrap-5.3.2-dist/css/bootstrap.css">
+  <link rel="stylesheet" href="./bootstrap-5.3.2-dist/js/bootstrap.js">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body ng-app="myapp" ng-controller="myctrl">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+               
+<form>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Họ và tên</label>
+    <input ng-model="student.name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label  class="form-label">Ngày sinh</label>
+    <input  ng-model="student.date" type="text" class="form-control"  aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label  class="form-label">Điểm</label>
+    <input  ng-model="student.mark" type="number" class="form-control"  aria-describedby="emailHelp">
+  </div>
+  <button ng-click="save()" type="button" class="btn btn-outline-secondary">Lưu</button>
+  <button ng-click="cancel()" type="button" class="btn btn-outline-secondary">Hủy</button>
+  <hr>
+</form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <table class="table table-striped">
+                    <tbody>
+                        <tr>
+                            <td>Họ và tên</td>
+                            <td>Ngày sinh</td>
+                            <td>Điểm</td>
+                        </tr>
+                        <tr ng-repeat="st in list_students">
+                            <td>{{st.name}}</td>
+                            <td>{{st.date}}</td>
+                            <td>{{st.mark}}</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+
+    </div>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

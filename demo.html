@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./angular.min.js"></script>
+      <script src="./demo.js"></script>
+    <link rel="stylesheet" href="./bootstrap-5.3.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./bootstrap-5.3.2-dist/js/bootstrap.js">
+    
+</head>
+<body ng-app="myapp"> 
+    <div ng-controller="ctrl1">
+            <input ng-model="firstname"   type="text" style="width: 500px;text-align: center; padding: 10px; border-color: blue;margin-top: 20px;"  aria-label="First name" class="form-control">
+            <input ng-model="lastname"  type="text" style="width: 500px;text-align: center; padding: 10px; border-color: blue; margin-top: 20px;" aria-label="Last name"  class="form-control">
+            <button ng-click="handleclick()" type="button" style="padding: 5px;" class="btn btn-outline-primary">Show</button>
+    </div>
+<hr>
+    <div ng-controller="ctrl2">
+        <h2>Fullname: {{Fullname}}</h2>
+    </div>
+
+</body>
+</html>
